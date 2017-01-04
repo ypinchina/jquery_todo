@@ -1,0 +1,10 @@
+*
+{
+    background: rgba(0,0,0,0.1);
+}
+.container{
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
