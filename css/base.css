@@ -24,10 +24,10 @@ body{
 h1{
     text-align: center;
 }
-input,.task-item,button,.task-detail-mask{
-    -webkit-border-radius:3px;
+input,.task-item,button,.task-detail-mask,textarea{
+    /* -webkit-border-radius:3px; */
     -moz-border-radius:3px;
-    border-radius:3px;
+    /* border-radius:3px; */
     -webkit-box-shadow:0 3px 2px rgba(0,0,0,0.4);
     -moz-box-shadow: 0 3px 2px  rgba(0,0,0,0.4);
     box-shadow: 0 3px 2px  rgba(0,0,0,0.4);
@@ -35,8 +35,11 @@ input,.task-item,button,.task-detail-mask{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     color: #333;
+    border: none;
+    outline: none;
+    background-color: #ddd;
 }
-input[type=checkbox]{
+input[type=checkbox],button[type=submit]{
     box-shadow: none;
 }
 input[type=text],input[type=date]{
@@ -45,7 +48,6 @@ input[type=text],input[type=date]{
     margin-right: 1%;
     padding: 7px 0;
     height: 35px;
-    border: none;
     background-color: #ddd;
     outline: 0;
 }
@@ -53,13 +55,14 @@ input[type=text]{
     text-indent: 20px;
     font-size: 16px;
 }
+
 input[type=text]:hover,input[type=date]:hover,
-input[type=text]:focus,input[type=date]:focus{
+input[type=text]:focus,input[type=date]:focus,textarea:hover,textarea:focus{
  background-color: #fff;
 }
 
  button[type=submit]{
-    border: none;
+
     background-color: #a4b2e4;
     float: right;
     width: 15%;
@@ -102,8 +105,32 @@ margin:  8px 0;
 .task-detail{
     z-index: 2;
    padding: 10px;
+    height: 100%;
     bottom:0;
     right: 0;
-    background-color: #fff;
+    width: 50%;
+    color: #333;
+    background-color: #fefefe;
 
+}
+.task-detail .content{
+    font-weight: 900;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.task-detail input[type=date],textarea{
+    width: 100%;
+    margin-bottom: 8px;
+}
+textarea{
+    height: 100px;
+    background-color: #ddd;
+
+}
+.task-detail button[type=submit]{
+    float: none;
 }
