@@ -14,6 +14,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding-top: 5px;
+    position: relative;
 
 }
 body{
@@ -23,7 +24,7 @@ body{
 h1{
     text-align: center;
 }
-input,.task-item,button{
+input,.task-item,button,.task-detail-mask{
     -webkit-border-radius:3px;
     -moz-border-radius:3px;
     border-radius:3px;
@@ -86,4 +87,23 @@ margin:  8px 0;
 
 .task-item:hover{
     background-color: #ddd;
+}
+.task-detail-mask,.task-detail
+{
+    position: absolute;
+}
+.task-detail-mask{
+    background-color: rgba(30,30,30,0.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.task-detail{
+    z-index: 2;
+   padding: 10px;
+    bottom:0;
+    right: 0;
+    background-color: #fff;
+
 }
